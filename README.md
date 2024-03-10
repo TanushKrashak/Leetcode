@@ -1,3 +1,3 @@
 # Leetcode Questions Solved By Me
 
-Inside Leetcode Folder -> Language -> Difficulty -> Problem Number / Name
+Inside Language Folder -> Difficulty -> Problem Number / Name
