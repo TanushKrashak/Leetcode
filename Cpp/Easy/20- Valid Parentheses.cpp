@@ -10,60 +10,29 @@
 using namespace std;
 
 bool isValid(string s) {
-	string openBracks = "";
-	if (s.size() % 2 == 1)
-		return false;
-	int index = 0;
-	for (int i = 0; i < s.size(); i++) {
-		if (s[i] == '(') {
-			openBracks += '(';
-			index++;
-		}
-		else if (s[i] == '{') {
-			openBracks += '{';
-			index++;
-		}
-		else if (s[i] == '[') {
-			openBracks += '[';
-			index++;
-		}
-		else if (s[i] == ')') {
-			if (index - 1 >= 0 && openBracks[index - 1] == '(') {
-				if (openBracks.size() == 1)
-					openBracks = "";
-				else
-					openBracks = openBracks.substr(0, index - 1);
-				index--;
-			}
-			else
-				return false;
-		}
-		else if (s[i] == '}') {
-			if (index - 1 >= 0 && openBracks[index - 1] == '{') {
-				if (openBracks.size() == 1)
-					openBracks = "";
-				else
-					openBracks = openBracks.substr(0, index - 1);
-				index--;
-			}
-			else
-				return false;
-		}
-		else if (s[i] == ']') {
-			if (index - 1 >= 0 && openBracks[index - 1] == '[') {
-				if (openBracks.size() == 1)
-					openBracks = "";
-				else
-					openBracks = openBracks.substr(0, index - 1);
-				index--;
-			}
-			else
-				return false;
-		}
-		else
-			return false;
-	}
-	if (openBracks.size() == 0)
-		return true;
-	return false;
-}
+        int n = s.length();
+        stack<int> st;
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '[' || s[i] == '(' || s[i] == '{') {
+                st.push(s[i]);
+            } else {
+                if (st.empty()) {
+                    return false;
+                } else {
+                    char c = st.top();
+                    st.pop();
+                    if ((s[i] == ')' && c == '(') ||
+                        (s[i] == ']' && c == '[') ||
+                        (s[i] == '}' && c == '{')) {
+                        continue;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+        if (st.empty()) {
+            return true;
+        }
+        return false;
+    }
