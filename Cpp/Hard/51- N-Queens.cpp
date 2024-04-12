@@ -1,7 +1,7 @@
 
 // DIFFICULTY: Hard
 // Problem: 51. N-Queens
-// Problem Link: https://leetcode.com/problems/N-Queens
+// Problem Link: https://leetcode.com/problems/n-queens
 
 #include <iostream>
 #include <vector>
