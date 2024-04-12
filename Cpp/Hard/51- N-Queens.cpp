@@ -1,6 +1,6 @@
 
 // DIFFICULTY: Hard
-// Problem: 50. Pow(x, n)
+// Problem: 51. N-Queens
 // Problem Link: https://leetcode.com/problems/N-Queens
 
 #include <iostream>
