@@ -1,7 +1,7 @@
 
 // DIFFICULTY: Hard
 // Problem: 50. Pow(x, n)
-// Problem Link: https://leetcode.com/problems/powx-n/
+// Problem Link: https://leetcode.com/problems/N-Queens
 
 #include <iostream>
 #include <vector>
