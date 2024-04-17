@@ -8,9 +8,9 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
-	int size = nums.size();
-	for (int i = 0; i < size - 1; i++) { // Go Through Entire Array
-		for (int j = i + 1; j < size; j++) { // Go Through Remaining Array
+	int size = nums.size(); // Store Size Of Nums
+	for (int i = 0; i < size - 1; i++) { // Go Through Nums
+		for (int j = i + 1; j < size; j++) { // Go Through Remaining Part Of Nums
 			if (nums[i] + nums[j] == target) // Check If 2 Sum
 				return { i,j };
 		}
