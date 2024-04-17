@@ -17,12 +17,3 @@ vector<int> twoSum(vector<int>& nums, int target) {
 	return {};
 }
 
-int main() {
-	vector<int> nums = { 2,11,7,15 };
-	int target = 9;
-	vector<int> result = twoSum(nums, target);
-	for (int i = 0; i < result.size(); i++) {
-		cout << result[i] << " ";
-	}
-	return 0;
-}
