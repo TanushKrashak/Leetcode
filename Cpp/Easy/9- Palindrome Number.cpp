@@ -14,8 +14,9 @@ bool isPalindrome(int x) {
 	int temp = x;
 	int newX = 0;
 	while (temp > 0) {		
+		// Long Long Int for handling the size of *
 		if ((long long int)(newX) * 10 + (temp % 10) >= pow(2, 31))
-			return false;
+			return false; 
 		newX = newX * 10 + (temp % 10);
 		temp /= 10;
 	}
