@@ -17,10 +17,10 @@ bool isPalindrome(int x) {
 		// Long Long Int for handling the size of *
 		if ((long long int)(newX) * 10 + (temp % 10) >= pow(2, 31))
 			return false; 
-		newX = newX * 10 + (temp % 10);
-		temp /= 10;
+		newX = newX * 10 + (temp % 10); // Add Last Digit Of Temp To NewX From Beginning
+		temp /= 10; // Remove Last Digit Of Num
 	}
-	if (newX == x)
+	if (newX == x) // Is Palindrome
 		return true;
 	return false;
 }
