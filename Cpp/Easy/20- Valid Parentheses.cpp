@@ -20,7 +20,7 @@ bool isValid(string s) {
                     return false;
                 else {
                     char c = st.top(); // Get the latest Pushed Bracket
-                    st.pop();
+                    st.pop(); // Pop it out so that the next bracket can be used the next time
                     if ((s[i] == ')' && c == '(') ||
                         (s[i] == ']' && c == '[') ||
                         (s[i] == '}' && c == '{')) {
