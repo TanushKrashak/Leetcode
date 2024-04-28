@@ -11,7 +11,7 @@ using namespace std;
 
 bool isValid(string s) {
         int n = s.length(); // Store Length Of String
-        stack<int> st;
+        stack<int> st; // Declaring Empty Stack To Keep Track Of Brackets
         for (int i = 0; i < n; i++) {
             if (s[i] == '[' || s[i] == '(' || s[i] == '{') {
                 st.push(s[i]);
