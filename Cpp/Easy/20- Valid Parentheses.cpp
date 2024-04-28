@@ -21,17 +21,14 @@ bool isValid(string s) {
                 else {
                     char c = st.top(); // Get the latest Pushed Bracket
                     st.pop(); // Pop it out so that the next bracket can be used the next time
-                    if ((s[i] == ')' && c == '(') ||
-                        (s[i] == ']' && c == '[') ||
-                        (s[i] == '}' && c == '{')) {
-                        continue;
-                    } 
+                    if ((s[i] == ')' && c == '(') || (s[i] == ']' && c == '[') || (s[i] == '}' && c == '{')) // Both String Char and Poped Out Bracket are of same type
+                        continue;                    
                     else // Not a Closing Bracket OR Mismatched Bracket
                         return false;                    
                 }
             }
         }
-        if (st.empty()) {
+        if (st.empty()) { 
             return true;
         }
         return false;
