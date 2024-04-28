@@ -28,7 +28,7 @@ bool isValid(string s) {
                 }
             }
         }
-        if (st.empty()) { 
+        if (st.empty()) { // Only If stack is empty can it be valid as all brackets were cancelled out
             return true;
         }
         return false;
