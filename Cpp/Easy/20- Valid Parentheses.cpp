@@ -25,9 +25,9 @@ bool isValid(string s) {
                         (s[i] == ']' && c == '[') ||
                         (s[i] == '}' && c == '{')) {
                         continue;
-                    } else {
-                        return false;
-                    }
+                    } 
+                    else // Not a Closing Bracket OR Mismatched Bracket
+                        return false;                    
                 }
             }
         }
