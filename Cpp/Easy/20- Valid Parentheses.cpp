@@ -13,7 +13,7 @@ bool isValid(string s) {
         int n = s.length(); // Store Length Of String
         stack<int> st; // Declaring Empty Stack To Keep Track Of Brackets
         for (int i = 0; i < n; i++) { // Loop Through Entire String
-            if (s[i] == '[' || s[i] == '(' || s[i] == '{') {
+            if (s[i] == '[' || s[i] == '(' || s[i] == '{') { // Check if Char is Open Bracket, if so push to stack
                 st.push(s[i]);
             } else {
                 if (st.empty()) {
