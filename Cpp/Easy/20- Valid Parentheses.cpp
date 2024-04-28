@@ -19,7 +19,7 @@ bool isValid(string s) {
                 if (st.empty()) // If Stack is empty, No need to check For Close Bracket
                     return false;
                 else {
-                    char c = st.top();
+                    char c = st.top(); // Get the latest Pushed Bracket
                     st.pop();
                     if ((s[i] == ')' && c == '(') ||
                         (s[i] == ']' && c == '[') ||
