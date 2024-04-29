@@ -42,4 +42,6 @@ bool solve(vector<vector<char>>& board) {
 	return true; // board is solved
 }
 
-
+void solveSudoku(vector<vector<char>>& board) {
+	solve(board);
+}
