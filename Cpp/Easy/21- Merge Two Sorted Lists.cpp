@@ -29,12 +29,11 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	// Determine the head of the merged list
 	ListNode* mainHead = list1;
 	if (list1->val > list2->val) {
-		mainHead = list2;
-		bool head1 = false;
-		list2 = list2->next;
+		mainHead = list2; // Set the head of the merged list to the smaller value node
+		list2 = list2->next; // Move to the next node in list2
 	}
 	else {
-		list1 = list1->next;
+		list1 = list1->next; // Move to the next node in list1
 	}
 
 	// Merge the two lists
@@ -43,33 +42,32 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 		ListNode* temp;
 		if (list1->val > list2->val) {
 			// Insert list2 node into merged list
-			tempPointer->next = list2;
-			temp = list2->next;
-			list2->next = list1;
-			list2 = temp;
-			tempPointer = tempPointer->next;
+			tempPointer->next = list2; // Set the next node of the current node to list2 node
+			temp = list2->next; // Save the next node of list2
+			list2->next = list1; // Connect list2 node to list1 node
+			list2 = temp; // Move to the next node in list2
+			tempPointer = tempPointer->next; // Move to the next node in the merged list
 		}
 		else {
 			// Insert list1 node into merged list
-			tempPointer->next = list1;
-			temp = list1->next;
-			list1->next = list2;
-			list1 = temp;
-			tempPointer = tempPointer->next;
+			tempPointer->next = list1; // Set the next node of the current node to list1 node
+			temp = list1->next; // Save the next node of list1
+			list1->next = list2; // Connect list1 node to list2 node
+			list1 = temp; // Move to the next node in list1
+			tempPointer = tempPointer->next; // Move to the next node in the merged list
 		}
 	}
 
 	// Append remaining nodes from list1 and list2 if any
 	while (list1 != nullptr) {
-		tempPointer->next = list1;
-		list1 = list1->next;
-		tempPointer = tempPointer->next;
+		tempPointer->next = list1; // Append remaining nodes from list1
+		list1 = list1->next; // Move to the next node in list1
+		tempPointer = tempPointer->next; // Move to the next node in the merged list
 	}
 	while (list2 != nullptr) {
-		tempPointer->next = list2;
-		list2 = list2->next;
-		tempPointer = tempPointer->next;
+		tempPointer->next = list2; // Append remaining nodes from list2
+		list2 = list2->next; // Move to the next node in list2
+		tempPointer = tempPointer->next; // Move to the next node in the merged list
 	}
 	return mainHead;
 }
-
