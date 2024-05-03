@@ -20,6 +20,7 @@ struct ListNode {
 };
 
 ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+	// If either list empty, can't merge so return the other
 	if (list1 == nullptr)
 		return list2;
 	else if (list2 == nullptr)
