@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// Struct used by leetcode
 struct ListNode {
 	int val;
 	ListNode* next;
