@@ -26,6 +26,7 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	else if (list2 == nullptr)
 		return list1;
 
+	// Determine the head of the merged list
 	ListNode* mainHead = list1;
 	if (list1->val > list2->val) {
 		mainHead = list2;
@@ -35,10 +36,13 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	else {
 		list1 = list1->next;
 	}
+
+	// Merge the two lists
 	ListNode* tempPointer = mainHead;
 	while (list1 != nullptr && list2 != nullptr) {
 		ListNode* temp;
 		if (list1->val > list2->val) {
+			// Insert list2 node into merged list
 			tempPointer->next = list2;
 			temp = list2->next;
 			list2->next = list1;
@@ -46,6 +50,7 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 			tempPointer = tempPointer->next;
 		}
 		else {
+			// Insert list1 node into merged list
 			tempPointer->next = list1;
 			temp = list1->next;
 			list1->next = list2;
@@ -53,6 +58,8 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 			tempPointer = tempPointer->next;
 		}
 	}
+
+	// Append remaining nodes from list1 and list2 if any
 	while (list1 != nullptr) {
 		tempPointer->next = list1;
 		list1 = list1->next;
@@ -65,3 +72,4 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	}
 	return mainHead;
 }
+
