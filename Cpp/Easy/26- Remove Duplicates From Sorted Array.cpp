@@ -20,7 +20,7 @@ int removeDuplicates(vector<int>& nums) {
         while (i + 1 < size && nums[i] == nums[i + 1]) {
             i++;
         }
-        i++;
+        i++; // Move to the next element
         if (i < size) {
             nums[count] = nums[i];
         }
