@@ -23,7 +23,7 @@ int removeDuplicates(vector<int>& nums) {
         i++; // Move to the next element
         // If there are more elements in the vector
         if (i < size) {
-            nums[count] = nums[i];
+            nums[count] = nums[i]; // Store the next unique element at the appropriate index
         }
     }
     return count;
