@@ -21,6 +21,7 @@ int removeDuplicates(vector<int>& nums) {
             i++;
         }
         i++; // Move to the next element
+        // If there are more elements in the vector
         if (i < size) {
             nums[count] = nums[i];
         }
