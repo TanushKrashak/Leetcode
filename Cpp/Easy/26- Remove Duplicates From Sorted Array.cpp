@@ -13,9 +13,9 @@ using namespace std;
 int removeDuplicates(vector<int>& nums) {
     int count = 0; // Initialize a counter to keep track of unique elements
     int size = nums.size(); /// Store size of array
-    int i = 0;
+    int i = 0; // Loop Counter
     while (i < size) {
-        count++;
+        count++; // Increment for each unique element
         while (i + 1 < size && nums[i] == nums[i + 1]) {
             i++;
         }
