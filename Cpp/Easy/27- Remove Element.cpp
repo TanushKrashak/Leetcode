@@ -11,9 +11,9 @@
 using namespace std;
 
 int removeElement(vector<int>& nums, int val) {
-	sort(nums.begin(), nums.end());
-	int instances = 0;
-	int firstIndex = -1;
+	sort(nums.begin(), nums.end()); // Sort to keep all instances together
+	int instances = 0; // Count of how many times 'val' appears in the vector
+	int firstIndex = -1; // Index of the first occurrence of 'val'
 	int size = nums.size();
 	for (int i = 0; i < size; i++) {
 		if (nums[i] == val) {
