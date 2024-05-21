@@ -28,9 +28,10 @@ int removeElement(vector<int>& nums, int val) {
 			break;
 		}
 	}
-	int count = 0;
+	int count = 0; // Count of removed elements
 	while (instances > 0) {
 		if (size - count - 1 > 0) {
+			// Swap the element at 'firstIndex' with the last unprocessed element
 			int temp = nums[firstIndex];
 			nums[firstIndex] = nums[size - count - 1];
 			nums[size - count - 1] = temp;
