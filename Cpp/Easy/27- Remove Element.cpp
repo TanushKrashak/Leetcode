@@ -24,6 +24,7 @@ int removeElement(vector<int>& nums, int val) {
 				firstIndex = i; // Set the index of the first occurrence of 'val'
 		}
 		else if (nums[i] > val) {
+ 			// Since the vector is sorted, we can stop the loop if we encounter a number greater than 'val'
 			break;
 		}
 	}
