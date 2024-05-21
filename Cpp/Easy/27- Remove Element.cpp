@@ -37,8 +37,9 @@ int removeElement(vector<int>& nums, int val) {
 			nums[size - count - 1] = temp;
 			firstIndex++;
 		}
-		instances--;
+		instances--; // Decrement the count of remaining instances
 		count++;
 	}
+	// Return the new size of the vector after removing 'val' instances
 	return size - count;
 }
