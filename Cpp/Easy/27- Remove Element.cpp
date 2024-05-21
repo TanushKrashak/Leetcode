@@ -15,14 +15,17 @@ int removeElement(vector<int>& nums, int val) {
 	int instances = 0; // Count of how many times 'val' appears in the vector
 	int firstIndex = -1; // Index of the first occurrence of 'val'
 	int size = nums.size();
-	for (int i = 0; i < size; i++) {
+
+	// Iterate through the vector to find all occurrences of 'val'
+	for (int i = 0; i < size; i++) { 
 		if (nums[i] == val) {
 			instances++;
 			if (firstIndex == -1)
-				firstIndex = i;
+				firstIndex = i; // Set the index of the first occurrence of 'val'
 		}
-		else if (nums[i] > val)
+		else if (nums[i] > val) {
 			break;
+		}
 	}
 	int count = 0;
 	while (instances > 0) {
