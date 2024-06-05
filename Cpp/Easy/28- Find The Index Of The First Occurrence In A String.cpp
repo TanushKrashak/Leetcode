@@ -15,6 +15,7 @@ using namespace std;
 int strStr(string haystack, string needle) {
     int haySize = haystack.size(); // size of the haystack string
     int needleSize = needle.size(); // size of the needle string
+    // Loop through the haystack, but only up to the point where the remaining part is at least the size of the needle
     for (int i = 0; i <= haySize - needleSize; i++) {
         if (haystack[i] == needle[0]) {
             int count = 1;
