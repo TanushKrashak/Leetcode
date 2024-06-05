@@ -13,8 +13,8 @@ using namespace std;
 // Function to find the first occurrence of the substring 'needle' in the string 'haystack'
 // Returns the index of the first occurrence, or -1 if 'needle' is not part of 'haystack'
 int strStr(string haystack, string needle) {
-    int haySize = haystack.size();
-    int needleSize = needle.size();
+    int haySize = haystack.size(); // size of the haystack string
+    int needleSize = needle.size(); // size of the needle string
     for (int i = 0; i <= haySize - needleSize; i++) {
         if (haystack[i] == needle[0]) {
             int count = 1;
