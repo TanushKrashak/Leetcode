@@ -35,10 +35,12 @@ int strStr(string haystack, string needle) {
                     break;
                 }
             }
+            // Needle was found somewhere
             if (stopLoop == true)
                 return i;
         }
     }
+    // Needle was not found
     return -1;
 }
 
