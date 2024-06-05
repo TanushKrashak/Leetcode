@@ -21,7 +21,8 @@ int strStr(string haystack, string needle) {
         if (haystack[i] == needle[0]) {
             int count = 1; // count of matching characters
             int newI = i + 1; // Index to traverse through the rest of the haystack
-            bool stopLoop = true;
+            bool stopLoop = true; // Flag
+             // Continue checking subsequent characters until all characters in needle are matched
             while (count < needleSize) {
                 if (needle[count] == haystack[newI]) {
                     count++;
