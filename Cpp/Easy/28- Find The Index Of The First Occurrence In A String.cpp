@@ -19,8 +19,8 @@ int strStr(string haystack, string needle) {
     for (int i = 0; i <= haySize - needleSize; i++) {
          // Check if the current character in haystack matches the first character of needle
         if (haystack[i] == needle[0]) {
-            int count = 1;
-            int newI = i + 1;
+            int count = 1; // count of matching characters
+            int newI = i + 1; // Index to traverse through the rest of the haystack
             bool stopLoop = true;
             while (count < needleSize) {
                 if (needle[count] == haystack[newI]) {
