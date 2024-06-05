@@ -28,6 +28,7 @@ int strStr(string haystack, string needle) {
                     count++;
                     newI++;
                 }
+                // Failed to match it fully, break out
                 else {
                     stopLoop = false;
                     newI--;
