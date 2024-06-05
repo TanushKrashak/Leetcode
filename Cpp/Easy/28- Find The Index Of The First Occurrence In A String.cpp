@@ -17,6 +17,7 @@ int strStr(string haystack, string needle) {
     int needleSize = needle.size(); // size of the needle string
     // Loop through the haystack, but only up to the point where the remaining part is at least the size of the needle
     for (int i = 0; i <= haySize - needleSize; i++) {
+         // Check if the current character in haystack matches the first character of needle
         if (haystack[i] == needle[0]) {
             int count = 1;
             int newI = i + 1;
